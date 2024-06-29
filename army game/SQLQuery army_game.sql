@@ -82,25 +82,7 @@ player_ID int references army_schema.player(player_ID),
 
 
 =============================================================
-create table players
-(
-	player_id int identity ,
-	Player_name varchar(20) not null ,
-	Rank_player varchar(10) not null ,
-	constraint PK_Players primary key (player_id)
-);
 
-create table mission 
-(
-mission_id int identity not null ,
-mission_name varchar(10) not null ,
-Start_date date ,
-End_date   date ,
-player_id int ,
-constraint PK_mission primary key (mission_id),
-constraint Player_FK_Mission foreign key (player_id)
-references players (player_id)
-);
 
 insert into players ( player_name , Rank_player)
 values( 'Ahmed' , '**') ,( 'Saed' , '**') ,( 'kaled' , '**') ;
